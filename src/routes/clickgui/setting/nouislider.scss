@@ -1,0 +1,30 @@
+@use "sass:color";
+@use "../../../colors.scss" as *;
+
+.noUi-handle {
+    background: linear-gradient(90deg, $accent-color, $accent-color-2);
+    box-shadow: 0 0 15px rgba($accent-color-2, 0.75);
+    border: none;
+    border-radius: 50%;
+    height: 12px !important;
+    width: 12px !important;
+    transform: translate(-5px, 2.5px);
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+    display: none;
+}
+
+.noUi-target {
+    margin: 10px 0;
+    height: 5px;
+    border: none;
+    background-color: color.adjust($clickgui-text-color, $lightness: -80%);
+    box-shadow: unset;
+}
+
+.noUi-connect {
+    background: linear-gradient(90deg, $accent-color, $accent-color-2);
+    box-shadow: 0 0 15px rgba($accent-color-2, 0.75)
+}
